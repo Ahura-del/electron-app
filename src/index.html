@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Position size</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background: #000">
+    <div class="container">
+      <div class="my-3 input-group input-group-lg">
+        <span for="balance" class="input-group-text"> Balance $ </span>
+
+        <input
+          class="form-control"
+          id="balance"
+          type="number"
+          placeholder="1000 $"
+          aria-describedby="balance"
+        />
+      </div>
+
+      <div class="input-group mb-3 input-group-lg">
+        <input
+          id="risk"
+          type="number"
+          class="form-control"
+          placeholder="Risk %"
+        />
+        <input
+          id="sl"
+          type="number"
+          class="form-control"
+          placeholder="SL (pip)"
+        />
+
+        <input
+        id="currency"
+        type="number"
+        class="form-control"
+        placeholder="Currency"
+      />
+
+      </div>
+      <div class="btn-group col-12 btn-group-lg mb-3">
+        <button id="calculate" type="button" class="btn btn-success">
+          Calculate
+        </button>
+        <button id="rest" type="reset" class="btn btn-danger">Reset</button>
+      </div>
+
+      <div
+        style="width: 100%; height: 1px; background: #fff"
+        class="my-3"
+      ></div>
+      <h2 class="text-light text-center mb-3">Positions</h2>
+      <div class="input-group input-group-lg mb-3">
+        <span for="valLot" class="input-group-text">Lot</span>
+        <input
+          class="form-control"
+          id="valLot"
+          type="number"
+          aria-describedby="valLot"
+          readonly
+        />
+        <span
+          for="valLot"
+          class="input-group-text"
+          id="copy"
+          style="cursor: pointer"
+        >
+          <img src="./copy.svg" alt="copy" height="30px" />
+        </span>
+      </div>
+      <div class="input-group input-group-lg">
+        <span for="valdollar" class="input-group-text">$</span>
+        <input
+          class="form-control"
+          id="valdollar"
+          type="number"
+          aria-describedby="valdollar"
+          readonly
+        />
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
